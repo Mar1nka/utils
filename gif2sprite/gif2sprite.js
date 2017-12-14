@@ -85,7 +85,7 @@ function sampleImg(img, banana) {
     var gif = DOK.createGif(img.src);
     gif.addEventListener("load", function(e) {
         var width = gif.naturalWidth, height = gif.naturalHeight;
-        var cols = calculateBestSize(width, gif.naturalHeight, gif.frameCount);
+        var cols =  gif.frameCount // calculateBestSize(width, gif.naturalHeight, gif.frameCount);
         var rows = Math.ceil(gif.frameCount / cols);
         var scale = 1;
         var finalColWidth = Math.round(width * scale);
